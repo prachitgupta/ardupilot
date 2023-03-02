@@ -50,6 +50,11 @@ Mode *Copter::mode_from_mode_num(const Mode::Number mode)
             ret = &mode_auto;
             break;
 #endif
+#if MODE_FTSU_ENABLED == ENABLED
+        case Mode::Number::FTSU:
+            ret = &mode_ftsu;
+            break;
+#endif
 
 #if MODE_CIRCLE_ENABLED == ENABLED
         case Mode::Number::CIRCLE:
